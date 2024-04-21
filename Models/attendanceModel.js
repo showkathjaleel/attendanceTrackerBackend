@@ -1,40 +1,22 @@
 const mongoose = require('mongoose');
 
 const attendanceSchema = new mongoose.Schema({
-    // email: {
-    //     type: String,
-    //     required: true,
-    //     unique: true
-    // },
-    // loggedIn: {
-    //     type: String
-    // },
-    // region: {
-    //     type: String
-    // },
-    // shift: {
-    //     type: String
-    // },
-    // logoutTime: {
-    //     type: String
-    // },
+    email:{
+        type: String,
+    },
     userId:{
         type: String,
     },  
     loginDate:{
         type: String,
     },
-    firstLoginTime: {
+    lastLoginedTime: {
         type: Date,
-        required: true
+        // required: true
     },
     totalTimeSpent: {
         type: String
     },
-    // createdDate: {
-    //     type: Date,
-    //     default: Date.now // Set default value to current date/time
-    // }
 });
 
 const attendancedetails = mongoose.model("attendancedetails", attendanceSchema);
